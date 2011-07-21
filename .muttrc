@@ -5,12 +5,24 @@ set from="james@jamesandportia.com"
 set use_from="yes"
 set timeout=30
 set editor="nano"
+set signature="~/.signature"
+
+#### Mutt client settings ####
+
 source ~/.mutt/colors.linux #colorized mutt
-
-#GPG#
+set beep_new=yes  
+set sort=threads                # Sort messages as threads
+set sort_aux=last-date-received         # Then sort by date
+set strict_threads                  # Don't thread messages by subject
+# Prefer Plain text to html, html to word etc ...
+alternative_order text/plain text/html application/vnd.msword application/msword
+ 
+#PGP#
 source ~/.mutt/gpg.rc #gpg configuration
-#set pgp_autosign
-
+#set pgp_autosign # automatically sign all emails
+set pgp_replyencrypt	# encrypt any replies to encrypted messages
+set pgp_replysignencrypted	# automatically sign any messages I encrypt
+set pgp_sign_as=5974F5EE 
 
 ###IMAP setup###
 #Auth#
