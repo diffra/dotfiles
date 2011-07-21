@@ -1,0 +1,36 @@
+####Personal settings###
+#Basics#
+set realname="James Bertelson"
+set from="james@jamesandportia.com"
+set use_from="yes"
+set timeout=30
+set editor="nano"
+source ~/.mutt/colors.linux #colorized mutt
+
+#GPG#
+source ~/.mutt/gpg.rc #gpg configuration
+#set pgp_autosign
+
+
+###IMAP setup###
+#Auth#
+set imap_user=jbertelson@fastmail.fm
+set imap_pass=<password>
+
+#Server#
+set folder=imaps://mail.messagingengine.com:993/
+
+#mutt::IMAP config#
+set spoolfile=+INBOX
+mailboxes = +INBOX
+
+#IMAP config#
+set imap_check_subscribed
+set header_cache = ~/.mutt/hcache
+unset imap_passive
+set imap_keepalive=300
+set mail_check=120
+
+###SMTP config###
+
+#set sendmail="/usr/sbin/ssmtp"
