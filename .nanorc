@@ -1,0 +1,8 @@
+set backup
+set const
+set historylog
+set morespace
+set mouse
+set tabsize 4
+set tabstospaces
+
